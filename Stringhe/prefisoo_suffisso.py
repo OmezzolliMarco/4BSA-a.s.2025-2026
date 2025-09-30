@@ -16,4 +16,4 @@ a = input("Inserisci una parola: ")
 b = input("Inserisci una parola: ")
 
 print(trovaPrefisso(a,b))
-print(trovaSuffisso(a, b))
+print(trovaSuffisso(a,b))
