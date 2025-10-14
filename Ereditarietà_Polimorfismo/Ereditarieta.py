@@ -13,7 +13,8 @@ class Figlio(Padre): #in questa riga dichiaro che la classe Figlio eredita da Pa
     def info_scuola(self):
         print(f"Sono iscritto alla scuola {self.scuola}")
     def saluta(self): #override del metodo del padre
-        print(f"Ciao sono {self.nome} {self.cognome}")
+        super().saluta()
+        print(f"Vado alla scuola {self.scuola}")
     
 
 p = Padre("Mario", "Rossi") #creo l'istanza di padre
