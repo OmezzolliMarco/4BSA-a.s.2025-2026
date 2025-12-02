@@ -3,7 +3,7 @@ import tkinter as tk
 #sezione variabili globali
 numero1 = 0
 numero2 = 0
-operazione = ""
+op = ""
 
 #funzioni
 def operazione(testo: str):
@@ -17,12 +17,14 @@ def operazione(testo: str):
         vecchio_testo = vecchio_testo[:-1]
         valore.set(vecchio_testo)
     elif testo == ",":
-        pass
+        vecchio_valore = valore.get()
+        vecchio_valore += "."
+        valore.set(vecchio_valore)
     else:
         #gestire l'operazione
         global numero1
-        global operazione
-        operazione = testo
+        global op
+        op = testo
         numero1 = valore.get()
         valore.set("")
 
@@ -30,12 +32,13 @@ def calcolaRisultato():
     global numero2
     numero2 = valore.get()
     #operazioni
-    if operazione == "+":
+    if op == "+":
         #somma + conversione
         n1 = float(numero1)
         n2 = float(numero2)
         somma = n1+n2
         valore.set(str(somma))
+    #... completare con tutte le operazioni
 
 
 #main
